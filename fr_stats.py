@@ -83,6 +83,7 @@ plt.xticks(range(len(aff_u_c[s])), [s if len(s) < 35+5 else s[:35]+" (..)" for s
 plt.ylabel("Count")
 plt.title("Authors affiliations\n(can be more than one per author/paper)")
 plt.tight_layout()
+plt.savefig("author_affiliations.png")
 
 
 
@@ -102,6 +103,7 @@ plt.xticks(range(len(aff_u_papers[s])), [s if len(s) < 35+5 else s[:35]+" (..)" 
 plt.ylabel("Count")
 plt.title("Paper affiliations")
 plt.tight_layout()
+plt.savefig("papers_affiliations.png")
 
 
 
@@ -122,6 +124,7 @@ plt.xticks(range(len(aff_fr_u_c[s])), [s if len(s) < 35+5 else s[:35]+" (..)" fo
 plt.ylabel("Count")
 plt.title("French authors affiliations\n(can be more than one per author/paper)")
 plt.tight_layout()
+plt.savefig("fr_authors_affiliations.png")
 
 
 
@@ -138,6 +141,7 @@ plt.xticks(range(len(aff_fr_u_papers[s])), [s if len(s) < 35+5 else s[:35]+" (..
 plt.ylabel("Count")
 plt.title("Paper w/ French affiliations")
 plt.tight_layout()
+plt.savefig("fr_papers_affiliations.png")
 
 print("Count paper at least 1 French affiliation")
 data_fr = np.zeros(len(data), dtype=int)
