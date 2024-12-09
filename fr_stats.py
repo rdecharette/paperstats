@@ -99,7 +99,7 @@ fr_mask = is_french(aff_u)
 aff_fr_u = aff_u[fr_mask]
 aff_fr_u_c = aff_u_c[fr_mask]
 
-print("Found FR affiliations: ", aff_fr_u)
+print("Found FR affiliations (%d): "%(len(aff_fr_u)), aff_fr_u)
 
 
 
