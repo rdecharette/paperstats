@@ -1,0 +1,3 @@
+[submodule "thirdparty/paperlists"]
+	path = thirdparty/paperlists
+	url = git@github.com:papercopilot/paperlists.git
