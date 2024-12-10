@@ -59,6 +59,10 @@ def conf_stats_fr(conf):
         return event_name() + "_" + f
 
     conf_path = os.path.join('thirdparty','paperlists',conf)
+    if not os.path.exists(conf_path):
+        print("/!\\ No conf data")
+        return {"data": [], "data_fr": []}
+
     f = open(conf_path)
     data = np.asarray(json.load(f))
 
@@ -162,8 +166,8 @@ if __name__ == '__main__':
     # conf = "nips/nips2024.json"
 
     # for c in ["cvpr/cvpr2024.json", "nips/nips2024.json"]:
-    for c in ["cvpr", "nips"]:
-    # for c in ["eccv", "wacv"]:
+    # for c in ["cvpr", "nips"]:
+    for c in ["eccv", "wacv", "iccv"]:
         years = np.arange(2015, 2024+1)
         stats = np.zeros_like(years, dtype=object)
         for j, y in enumerate(years):
